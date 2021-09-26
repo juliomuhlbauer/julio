@@ -1,10 +1,10 @@
-import BottomNav from "@/components/BottomNav";
+import BottomNav from "@/components/layout/BottomNav";
 import GradientCircle from "@/components/GradientCircle";
-import Nav from "@/components/Nav";
+import Nav from "@/components/layout/Header";
 import { Box, Container, Stack } from "@chakra-ui/layout";
 import { useRouter } from "next/router";
 import { FC } from "react";
-import Motion from "./Motion";
+import Motion from "../Motion";
 
 const Layout: FC = ({ children }) => {
   const router = useRouter();

@@ -7,7 +7,7 @@ import { Container, HStack, Link } from "@chakra-ui/layout";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
-export default function Nav() {
+const Header = () => {
   const { isMd } = useMedia();
 
   const router = useRouter();
@@ -82,4 +82,6 @@ export default function Nav() {
       </HStack>
     </Container>
   );
-}
+};
+
+export default Header;
