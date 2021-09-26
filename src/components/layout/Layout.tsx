@@ -12,8 +12,6 @@ const Layout: FC = ({ children }) => {
 
   const { isMd } = useMedia();
 
-  console.log(isMd);
-
   return (
     <>
       <Box h="100%" w="100%" position="fixed" zIndex="-1">
