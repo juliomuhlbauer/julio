@@ -7,7 +7,7 @@ const Projects = () => {
   const theme = useTheme();
 
   return (
-    <Stack align="center">
+    <Stack align="center" justify="center" h="80%">
       {projects.map((project, index) => (
         <Link
           key={index}
@@ -25,7 +25,7 @@ const Projects = () => {
             boxShadow={`0 25px 100px -5px ${theme.colors.primary[500]}50`}
             rounded="lg"
             w="600px"
-            h="350px"
+            maxH="350px"
             objectFit="cover"
             objectPosition="top"
             src={project.banner}

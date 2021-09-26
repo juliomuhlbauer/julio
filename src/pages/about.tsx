@@ -8,7 +8,7 @@ const About = () => {
   const theme = useTheme();
 
   return (
-    <Stack spacing={8} mb={64}>
+    <Stack spacing={8} pb={32}>
       <Stack
         align="center"
         justify="space-between"
