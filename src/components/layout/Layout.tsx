@@ -24,6 +24,7 @@ const Layout: FC = ({ children }) => {
         <BottomNav />
 
         <Container
+          as="main"
           py={4}
           h="100%"
           maxW="container.md"

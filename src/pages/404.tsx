@@ -2,7 +2,7 @@ import { Center, Heading } from "@chakra-ui/layout";
 
 const HomePage = () => {
   return (
-    <Center h="90%">
+    <Center as="section" h="90%">
       <Heading
         fontSize={{ base: "6xl", md: "8xl" }}
         fontWeight="black"

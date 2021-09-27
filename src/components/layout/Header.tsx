@@ -14,6 +14,7 @@ const Header = () => {
 
   return (
     <Container
+      as="header"
       zIndex="10"
       position={{ base: "static", md: "sticky" }}
       my={{ base: 4, md: 6 }}
@@ -43,12 +44,12 @@ const Header = () => {
           </Link>
         </NextLink>
         {!isMd && (
-          <HStack spacing={4}>
+          <HStack as="nav" spacing={4}>
             {pages.map(({ href, label }) => (
               <NextLink href={href} key={href} passHref>
                 <Button
-                  key={href}
                   as="a"
+                  key={href}
                   colorScheme="primary"
                   variant="ghost"
                   fontWeight="bold"
@@ -64,13 +65,13 @@ const Header = () => {
           </HStack>
         )}
 
-        <HStack spacing={4}>
+        <HStack as="nav" spacing={4}>
           {socials.map((social, index) => (
             <IconButton
-              rounded="full"
-              key={index}
               as={Link}
+              key={index}
               aria-label={social.title}
+              rounded="full"
               colorScheme="primary"
               variant="ghost"
               icon={<Icon as={social.icon} boxSize={6} />}

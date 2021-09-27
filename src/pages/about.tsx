@@ -10,6 +10,7 @@ const About = () => {
   return (
     <Stack spacing={8} pb={32}>
       <Stack
+        as="section"
         align="center"
         justify="space-between"
         direction={{ base: "column", md: "row" }}
@@ -32,13 +33,15 @@ const About = () => {
           boxShadow={`0 25px 50px -10px ${theme.colors.primary[500]}50`}
         />
       </Stack>
-      <Stack spacing={8}>
+
+      <Stack as="section" spacing={8}>
         <Heading fontWeight="extrabold" color="primary.200">
           Skills
         </Heading>
-        <Stack spacing={4}>
+        <Stack as="ul" spacing={4}>
           {skills.map((skill, index) => (
             <HStack
+              as="li"
               key={index}
               color="primary.200"
               spacing={4}

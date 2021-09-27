@@ -16,6 +16,7 @@ const BottomNav = () => {
   return (
     <Box zIndex="10" position="fixed" bottom={4}>
       <HStack
+        as="nav"
         justify="center"
         borderRadius="lg"
         py={2}

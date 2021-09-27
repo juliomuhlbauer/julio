@@ -12,7 +12,7 @@ import { HStack, Icon, IconButton, Tooltip } from "@chakra-ui/react";
 const HomePage = () => {
   return (
     <Center h="90%">
-      <Stack align="center" spacing={4}>
+      <Stack as="section" align="center" spacing={4}>
         <Stack align="center">
           <Heading
             fontSize={{ base: "5xl", sm: "6xl", md: "7xl" }}
