@@ -5,6 +5,7 @@ const GradientCircle: FC<BoxProps> = ({ animation, ...rest }) => {
   return (
     <Circle
       position="absolute"
+      overflow="visible"
       bgGradient="linear(to-r,  #FFE345, primary.500)"
       w={{ base: "10rem", md: "15rem" }}
       h={{ base: "10rem", md: "15rem" }}

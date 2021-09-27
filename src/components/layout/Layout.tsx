@@ -1,7 +1,7 @@
 import BottomNav from "@/components/layout/BottomNav";
 import GradientCircle from "@/components/GradientCircle";
 import Nav from "@/components/layout/Header";
-import { Box, Container, Stack } from "@chakra-ui/layout";
+import { Box, Center, Container, Flex, Stack } from "@chakra-ui/layout";
 import { useRouter } from "next/router";
 import { FC } from "react";
 import Motion from "../Motion";
@@ -14,19 +14,26 @@ const Layout: FC = ({ children }) => {
 
   return (
     <>
-      <Box h="100%" w="100%" position="fixed" zIndex="-1">
+      <Box
+        top={0}
+        left={0}
+        right={0}
+        bottom={0}
+        position="absolute"
+        overflow="hidden"
+        zIndex={-500}
+      >
         <GradientCircle top="0" left="0" />
-        <GradientCircle bottom="0" right="0" />
+        <GradientCircle top="50%" right="0" />
       </Box>
 
-      <Stack overflow="auto" align="center" w="100%" h="100%">
+      <Stack align="center" minH="100vh">
         <Nav />
         <BottomNav />
-
         <Container
           as="main"
-          py={4}
           h="100%"
+          py={4}
           maxW="container.md"
           {...(isMd && {
             mb: 64,
@@ -34,7 +41,6 @@ const Layout: FC = ({ children }) => {
         >
           <Motion
             key={router.route}
-            w="100%"
             h="100%"
             initial={{ opacity: 0, y: -50 }}
             animate={{

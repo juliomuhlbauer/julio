@@ -11,7 +11,7 @@ import { HStack, Icon, IconButton, Tooltip } from "@chakra-ui/react";
 
 const HomePage = () => {
   return (
-    <Center h="90%">
+    <Center minH="75vh">
       <Stack as="section" align="center" spacing={4}>
         <Stack align="center">
           <Heading

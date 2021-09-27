@@ -11,22 +11,14 @@ export const globalStyles: Styles = {
       boxSizing: "border-box",
     },
     html: {
-      h: "100%",
-      w: "100%",
       scrollBehavior: "smooth",
       WebkitTapHighlightColor: "transparent",
     },
     body: {
-      h: "100%",
-      w: "100%",
-      position: "fixed",
       bg: mode("gray.100", "gray.900")(props),
       color: mode("gray.700", "gray.200")(props),
     },
-    "#__next": {
-      h: "100%",
-      w: "100%",
-    },
+
     _selection: {
       color: "white",
       background: "primary.500",
