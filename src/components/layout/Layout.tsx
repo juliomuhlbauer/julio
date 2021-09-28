@@ -16,15 +16,7 @@ const Layout: FC = ({ children }) => {
   return (
     <>
       <ContextMenu />
-      <Box
-        top={0}
-        left={0}
-        right={0}
-        bottom={0}
-        position="absolute"
-        overflow="hidden"
-        zIndex={-500}
-      >
+      <Box inset={0} position="absolute" overflow="hidden" zIndex={-500}>
         <GradientCircle top="0" left="0" />
         <GradientCircle top="50%" right="0" />
       </Box>
