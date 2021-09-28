@@ -31,7 +31,7 @@ const Header = () => {
           backdropFilter: "saturate(150%) blur(25px)",
         }}
       >
-        <NextLink href="/">
+        <NextLink href="/" passHref>
           <Link>
             <IconButton
               variant="ghost"

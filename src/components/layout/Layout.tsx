@@ -1,6 +1,6 @@
 import BottomNav from "@/components/layout/BottomNav";
 import GradientCircle from "@/components/GradientCircle";
-import Nav from "@/components/layout/Header";
+import Header from "@/components/layout/Header";
 import { Box, Center, Container, Flex, Stack } from "@chakra-ui/layout";
 import { useRouter } from "next/router";
 import { FC } from "react";
@@ -22,7 +22,7 @@ const Layout: FC = ({ children }) => {
       </Box>
 
       <Stack align="center" minH="100vh">
-        <Nav />
+        <Header />
         <BottomNav />
         <Container
           as="main"
