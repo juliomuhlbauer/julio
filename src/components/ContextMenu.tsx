@@ -24,6 +24,7 @@ const ContextMenu = () => {
         position="absolute"
         top={anchorPoint.y}
         left={anchorPoint.x}
+        overflow="hidden"
       >
         {pages.map((page, index) => (
           <NextLink key={index} href={page.href}>
