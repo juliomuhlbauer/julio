@@ -43,14 +43,12 @@ const About = () => {
             <HStack
               as="li"
               key={index}
-              color="primary.200"
               spacing={4}
-              bgColor="glass.50"
               p={4}
               rounded="lg"
-              sx={{
-                backdropFilter: "saturate(150%) blur(25px)",
-              }}
+              color="primary.200"
+              bgColor="glass.50"
+              backdropFilter="saturate(150%) blur(25px)"
               boxShadow={`0 2px 50px -25px ${theme.colors.primary[500]}50`}
               transition="all 0.25s ease"
               _hover={{

@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { FC } from "react";
 import Motion from "../Motion";
 import { useMedia } from "@/hooks";
+import ContextMenu from "../ContextMenu";
 
 const Layout: FC = ({ children }) => {
   const router = useRouter();
@@ -14,6 +15,7 @@ const Layout: FC = ({ children }) => {
 
   return (
     <>
+      <ContextMenu />
       <Box
         top={0}
         left={0}
