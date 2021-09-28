@@ -8,10 +8,9 @@ import {
   Stack,
   WrapItem,
 } from "@chakra-ui/layout";
-import { Skeleton } from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/system";
 import { NextPage } from "next";
-import { FC, useState } from "react";
+import { FC } from "react";
 
 const Projects: NextPage = () => {
   return (
@@ -36,28 +35,24 @@ interface ProjectItemProps {
 
 const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   const theme = useTheme();
-  const [imageLoad, setImageLoad] = useState(false);
 
   return (
     <WrapItem>
       <Link href={project.link} isExternal rounded="md" _hover={{}}>
-        <Skeleton isLoaded={imageLoad} rounded="lg">
-          <Img
-            src={project.banner}
-            objectFit="cover"
-            objectPosition="top"
-            w="600px"
-            h={["250px", "350px"]}
-            rounded="lg"
-            boxShadow={`0 25px 100px -5px ${theme.colors.primary[500]}50`}
-            transition="all 0.25s ease"
-            _hover={{
-              transform: "scale(1.05)",
-              boxShadow: `0 25px 100px -5px ${theme.colors.primary[500]}60`,
-            }}
-            onLoad={() => setImageLoad(true)}
-          />
-        </Skeleton>
+        <Img
+          src={project.banner}
+          objectFit="cover"
+          objectPosition="top"
+          w="600px"
+          h={["250px", "350px"]}
+          rounded="lg"
+          boxShadow={`0 25px 100px -5px ${theme.colors.primary[500]}50`}
+          transition="all 0.25s ease"
+          _hover={{
+            transform: "scale(1.05)",
+            boxShadow: `0 25px 100px -5px ${theme.colors.primary[500]}60`,
+          }}
+        />
         <HStack zIndex={2} position="relative" bottom={6} right={6}>
           <Img
             zIndex={3}

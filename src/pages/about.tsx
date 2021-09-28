@@ -2,14 +2,10 @@ import { skills } from "@/data";
 import Icon from "@chakra-ui/icon";
 import { Img } from "@chakra-ui/image";
 import { Heading, HStack, Stack, Text } from "@chakra-ui/layout";
-import { Skeleton } from "@chakra-ui/skeleton";
 import { useTheme } from "@chakra-ui/system";
 import { NextPage } from "next";
-import { useState } from "react";
 
 const About: NextPage = () => {
-  const [imageLoad, setImageLoad] = useState(false);
-
   const theme = useTheme();
 
   return (
@@ -27,22 +23,20 @@ const About: NextPage = () => {
           </Heading>
           <Text fontSize="lg">An indie product maker based in Brazil.</Text>
         </Stack>
-        <Skeleton isLoaded={imageLoad} boxSize="300px" rounded="xl">
-          <Img
-            src="/julio.png"
-            onLoad={() => setImageLoad(true)}
-            boxSize="300px"
-            fit="cover"
-            rounded="xl"
-            boxShadow={`0 25px 50px -10px ${theme.colors.primary[500]}50`}
-            transition="all 0.2s ease-in-out"
-            _hover={{
-              boxShadow: `0 25px 50px -10px ${theme.colors.primary[500]}75`,
-              transform: "scale(1.05)",
-            }}
-            alt="Júlio Werner"
-          />
-        </Skeleton>
+
+        <Img
+          src="/julio.png"
+          boxSize="300px"
+          fit="cover"
+          rounded="xl"
+          boxShadow={`0 25px 50px -10px ${theme.colors.primary[500]}50`}
+          transition="all 0.2s ease-in-out"
+          _hover={{
+            boxShadow: `0 25px 50px -10px ${theme.colors.primary[500]}75`,
+            transform: "scale(1.05)",
+          }}
+          alt="Júlio Werner"
+        />
       </Stack>
 
       <Stack as="section" spacing={8}>
