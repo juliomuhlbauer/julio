@@ -4,6 +4,7 @@ import { JWIcon } from "@/theme/icons";
 import { Button, IconButton } from "@chakra-ui/button";
 import Icon from "@chakra-ui/icon";
 import { Container, HStack, Link } from "@chakra-ui/layout";
+import VisuallyHidden from "@chakra-ui/visually-hidden";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
@@ -33,6 +34,7 @@ const Header = () => {
       >
         <NextLink href="/" passHref>
           <Link>
+            <VisuallyHidden>JW Logo</VisuallyHidden>
             <IconButton
               variant="ghost"
               aria-label="JW Logo"
