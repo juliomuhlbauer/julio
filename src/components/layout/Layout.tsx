@@ -6,7 +6,11 @@ import { useRouter } from "next/router";
 import { FC } from "react";
 import Motion from "../Motion";
 import { useMedia } from "@/hooks";
-import ContextMenu from "../ContextMenu";
+import dynamic from "next/dynamic";
+
+const ContextMenu = dynamic(() => import("@/components/ContextMenu"), {
+  ssr: false,
+});
 
 const Layout: FC = ({ children }) => {
   const router = useRouter();
@@ -16,6 +20,7 @@ const Layout: FC = ({ children }) => {
   return (
     <>
       <ContextMenu />
+
       <Box inset={0} position="absolute" overflow="hidden" zIndex={-500}>
         <GradientCircle top="0" left="0" />
         <GradientCircle top="50%" right="0" />

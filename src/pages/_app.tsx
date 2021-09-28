@@ -82,7 +82,7 @@ function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/Logo.svg" />
       </Head>
       <SEO />
-      <Analytics />
+      {process.env.NODE_ENV !== "development" && <Analytics />}
       <ChakraProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />

@@ -1,4 +1,11 @@
-export const projects = [
+export interface ProjectsProps {
+  name: string;
+  link: string;
+  banner: string;
+  logo: string;
+}
+
+export const projects: ProjectsProps[] = [
   {
     name: "A Rede do Futuro",
     link: "https://arededofuturo.com.br/",

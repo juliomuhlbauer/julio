@@ -8,8 +8,9 @@ import {
   Text,
 } from "@chakra-ui/layout";
 import { HStack, Icon, IconButton, Tooltip } from "@chakra-ui/react";
+import { NextPage } from "next";
 
-const HomePage = () => {
+const HomePage: NextPage = () => {
   return (
     <Center minH="75vh">
       <Stack as="section" align="center" spacing={4}>

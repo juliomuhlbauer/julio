@@ -1,6 +1,7 @@
 import { Center, Heading } from "@chakra-ui/layout";
+import { NextPage } from "next";
 
-const HomePage = () => {
+const NotFoundPage: NextPage = () => {
   return (
     <Center as="section" h="90%">
       <Heading
@@ -16,4 +17,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default NotFoundPage;
