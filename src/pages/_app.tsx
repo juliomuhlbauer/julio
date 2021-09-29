@@ -59,12 +59,12 @@ const SEO = () => {
       titleTemplate={`%s | Júlio Werner`}
       description={meta.description}
       openGraph={{
-        title: meta.title,
         site_name: meta.title,
+        title: meta.title,
         description: meta.description,
         url: meta.url + router.asPath,
-        type: "website",
         locale: "en_US",
+        type: "website",
         images: [
           {
             url: meta.banner,
@@ -85,7 +85,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link rel="icon" href="/Logo.svg" />
+        <link rel="shortcut icon" href="/Logo.svg" />
       </Head>
       <SEO />
       {process.env.NODE_ENV !== "development" && <Analytics />}
