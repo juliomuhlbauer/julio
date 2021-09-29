@@ -10,7 +10,7 @@ import "@fontsource/inter/900.css";
 import { DefaultSeo } from "next-seo";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { Router } from "next/router";
+import { Router, useRouter } from "next/router";
 import Script from "next/script";
 import NProgress from "nprogress";
 
@@ -18,9 +18,12 @@ Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
-const title = "Júlio Werner";
-const url = "https://juliowerner.com";
-const description = "Júlio Werner is an indie product maker";
+const meta = {
+  title: "Júlio Werner",
+  url: "https://julio-werner.com",
+  description: "Júlio Werner is an indie product maker",
+  banner: "https://julio-werner.com/banner.png",
+};
 
 const Analytics = () => {
   const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;
@@ -49,21 +52,25 @@ const Analytics = () => {
 };
 
 const SEO = () => {
+  const router = useRouter();
   return (
     <DefaultSeo
-      title={title}
-      description={description}
+      defaultTitle={meta.title}
+      titleTemplate={`%s | Júlio Werner`}
+      description={meta.description}
       openGraph={{
-        title,
-        description,
-        url,
+        title: meta.title,
+        site_name: meta.title,
+        description: meta.description,
+        url: meta.url + router.asPath,
         type: "website",
+        locale: "en_US",
         images: [
           {
-            url: "https://juliowerner.com/banner.png",
+            url: meta.banner,
             width: 1200,
             height: 630,
-            alt: description,
+            alt: meta.description,
           },
         ],
       }}
@@ -78,7 +85,6 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Júlio Werner</title>
         <link rel="icon" href="/Logo.svg" />
       </Head>
       <SEO />

@@ -10,20 +10,24 @@ import {
 } from "@chakra-ui/layout";
 import { useTheme } from "@chakra-ui/system";
 import { NextPage } from "next";
+import { NextSeo } from "next-seo";
 import { FC } from "react";
 
 const Projects: NextPage = () => {
   return (
-    <Stack as="section" spacing={8}>
-      <Heading fontWeight="extrabold" color="primary.200">
-        Projects
-      </Heading>
-      <Stack as="ul" align="center">
-        {projects.map((project, index) => (
-          <ProjectItem key={index} project={project} />
-        ))}
+    <>
+      <NextSeo title="Projects" />
+      <Stack as="section" spacing={8}>
+        <Heading fontWeight="extrabold" color="primary.200">
+          Projects
+        </Heading>
+        <Stack as="ul" align="center">
+          {projects.map((project, index) => (
+            <ProjectItem key={index} project={project} />
+          ))}
+        </Stack>
       </Stack>
-    </Stack>
+    </>
   );
 };
 
