@@ -72,7 +72,7 @@ const Header = () => {
             <IconButton
               as={Link}
               key={index}
-              aria-label={social.title}
+              aria-label={social.name}
               rounded="full"
               colorScheme="primary"
               variant="ghost"
