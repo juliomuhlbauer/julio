@@ -5,6 +5,8 @@ import { Heading, HStack, Stack, Text } from "@chakra-ui/layout";
 import { useTheme } from "@chakra-ui/system";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
+import Image from "@/components/Image";
+import Profile from "public/julio.png";
 
 const About: NextPage = () => {
   const theme = useTheme();
@@ -13,7 +15,7 @@ const About: NextPage = () => {
     <>
       <NextSeo title="About" />
       <Stack spacing={8} pb={32}>
-        <Stack
+        <HStack
           as="section"
           align="center"
           justify="space-between"
@@ -27,10 +29,13 @@ const About: NextPage = () => {
             <Text fontSize="lg">An indie product maker from Brazil.</Text>
           </Stack>
 
-          <Img
-            src="/julio.webp"
-            boxSize="300px"
-            fit="cover"
+          <Image
+            src={Profile}
+            placeholder="blur"
+            width="300px"
+            height="300px"
+            layout="responsive"
+            objectFit="cover"
             rounded="xl"
             boxShadow={`0 25px 50px -10px ${theme.colors.primary[500]}50`}
             transition="all 0.2s ease-in-out"
@@ -40,7 +45,7 @@ const About: NextPage = () => {
             }}
             alt="Júlio Werner"
           />
-        </Stack>
+        </HStack>
 
         <Stack as="section" spacing={8}>
           <Heading fontWeight="extrabold" color="primary.200">
