@@ -48,7 +48,7 @@ const ContextMenu = () => {
                 fontSize="lg"
                 fontWeight="semibold"
               >
-                {social.title}
+                {social.name}
               </MenuItem>
             </Link>
           ))}

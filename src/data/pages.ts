@@ -1,8 +1,15 @@
 import { IoRocketSharp } from "react-icons/io5";
 import { BiHome } from "react-icons/bi";
 import { BsFillPersonFill } from "react-icons/bs";
+import { FC } from "react";
 
-export const pages = [
+export interface PageProps {
+  href: string;
+  label: string;
+  icon: FC;
+}
+
+export const pages: PageProps[] = [
   {
     href: "/",
     label: "Home",
