@@ -20,9 +20,9 @@ Router.events.on("routeChangeError", () => NProgress.done());
 
 const meta = {
   title: "Júlio Werner",
-  url: "https://julio-werner.com",
+  url: "https://juliowerner.com",
   description: "Júlio Werner is an indie product maker",
-  banner: "https://julio-werner.com/banner.png",
+  banner: "https://juliowerner.com/banner.png",
 };
 
 const Analytics = () => {
