@@ -1,5 +1,5 @@
-import Button from "./Button";
-import Link from "./Link";
+import Button from "./button";
+import Link from "./link";
 
 const components = {
   Button,

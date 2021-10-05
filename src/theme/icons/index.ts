@@ -1,2 +1,2 @@
-export * from "./JWIcon";
-export * from "./RDFIcon";
+export * from "./jw-icon";
+export * from "./rdf-icon";

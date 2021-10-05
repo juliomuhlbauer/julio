@@ -1,11 +1,10 @@
+import Image from "@/components/image";
 import { skills } from "@/data";
 import Icon from "@chakra-ui/icon";
-import { Img } from "@chakra-ui/image";
-import { Heading, HStack, Stack, Text } from "@chakra-ui/layout";
+import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/layout";
 import { useTheme } from "@chakra-ui/system";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import Image from "@/components/Image";
 import Profile from "public/julio.png";
 
 const About: NextPage = () => {
@@ -15,7 +14,7 @@ const About: NextPage = () => {
     <>
       <NextSeo title="About" />
       <Stack spacing={8} pb={32}>
-        <HStack
+        <Stack
           as="section"
           align="center"
           justify="space-between"
@@ -28,24 +27,31 @@ const About: NextPage = () => {
             </Heading>
             <Text fontSize="lg">An indie product maker from Brazil.</Text>
           </Stack>
-
-          <Image
-            src={Profile}
-            placeholder="blur"
-            width="300px"
-            height="300px"
-            layout="responsive"
-            objectFit="cover"
-            rounded="xl"
+          <Box
             boxShadow={`0 25px 50px -10px ${theme.colors.primary[500]}50`}
             transition="all 0.2s ease-in-out"
             _hover={{
               boxShadow: `0 25px 50px -10px ${theme.colors.primary[500]}75`,
-              transform: "scale(1.05)",
             }}
-            alt="Júlio Werner"
-          />
-        </HStack>
+            rounded="xl"
+            boxSize="300px"
+          >
+            <Image
+              src={Profile}
+              placeholder="blur"
+              width="300px"
+              height="300px"
+              layout="responsive"
+              objectFit="contain"
+              rounded="xl"
+              transition="all 0.2s ease-in-out"
+              _hover={{
+                transform: "scale(1.05)",
+              }}
+              alt="Júlio Werner"
+            />
+          </Box>
+        </Stack>
 
         <Stack as="section" spacing={8}>
           <Heading fontWeight="extrabold" color="primary.200">

@@ -1,14 +1,14 @@
-import BottomNav from "@/components/layout/BottomNav";
-import GradientCircle from "@/components/GradientCircle";
-import Header from "@/components/layout/Header";
-import { Box, Center, Container, Flex, Stack } from "@chakra-ui/layout";
+import GradientCircle from "@/components/gradient-circle";
+import { useMedia } from "@/hooks";
+import BottomNav from "@/layout/bottom-nav";
+import Header from "@/layout/header";
+import { Box, Container, Stack } from "@chakra-ui/layout";
+import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { FC } from "react";
-import Motion from "../Motion";
-import { useMedia } from "@/hooks";
-import dynamic from "next/dynamic";
+import Motion from "../components/motion";
 
-const ContextMenu = dynamic(() => import("@/components/ContextMenu"), {
+const ContextMenu = dynamic(() => import("@/components/context-menu"), {
   ssr: false,
 });
 

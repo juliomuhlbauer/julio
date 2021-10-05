@@ -1,2 +1,2 @@
-export * from "./globalStyles";
-export * from "./ringStyle";
+export * from "./global-styles";
+export * from "./ring-style";

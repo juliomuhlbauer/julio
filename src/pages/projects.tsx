@@ -1,6 +1,5 @@
-import Image from "@/components/Image";
+import Image from "@/components/image";
 import { projects, ProjectsProps } from "@/data";
-import { Img } from "@chakra-ui/image";
 import {
   Container,
   Heading,
@@ -82,6 +81,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
               rounded="md"
               position="relative"
               left={8}
+              placeholder="blur"
             />
             <Heading size="lg">{project.name}</Heading>
           </HStack>

@@ -1,5 +1,5 @@
 import { pages, socials } from "@/data";
-import { useContextMenu } from "@/hooks/useContextMenu";
+import { useContextMenu } from "@/hooks/use-context-menu";
 import Icon from "@chakra-ui/icon";
 import { Box, Link } from "@chakra-ui/layout";
 import { Menu, MenuDivider, MenuItem, MenuList } from "@chakra-ui/menu";
