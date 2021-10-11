@@ -1,10 +1,5 @@
 import { FC } from "react";
-import {
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaProductHunt,
-} from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export interface SocialProps {
   name: string;
@@ -27,10 +22,5 @@ export const socials: SocialProps[] = [
     name: "LinkedIn",
     link: "https://www.linkedin.com/in/julio-werner/",
     icon: FaLinkedin,
-  },
-  {
-    name: "Product Hunt",
-    link: "https://www.producthunt.com/@juliowerner",
-    icon: FaProductHunt,
   },
 ];

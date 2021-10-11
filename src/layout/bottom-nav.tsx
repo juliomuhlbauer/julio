@@ -21,7 +21,7 @@ const BottomNav = () => {
         borderRadius="lg"
         py={2}
         px={4}
-        bgColor="glass.50"
+        bgColor="glass.100"
         sx={{
           backdropFilter: "saturate(120%) blur(20px)",
         }}

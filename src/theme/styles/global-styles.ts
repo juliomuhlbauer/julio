@@ -4,6 +4,7 @@ import {
   SystemStyleFunction,
   SystemStyleObject,
 } from "@chakra-ui/theme-tools";
+import { defaultCursor } from ".";
 
 export const globalStyles: Styles = {
   global: (props) => ({
@@ -17,6 +18,7 @@ export const globalStyles: Styles = {
     body: {
       bg: mode("gray.100", "gray.900")(props),
       color: mode("gray.700", "gray.200")(props),
+      ...defaultCursor,
     },
 
     _selection: {
@@ -36,7 +38,7 @@ const scrollbar: SystemStyleFunction = (props) => ({
     },
     "::-webkit-scrollbar-thumb": {
       rounded: "5px",
-      bgColor: mode("gray.400", "gray.700")(props),
+      bgColor: mode("gray.400", "glass.700")(props),
     },
     "::-webkit-scrollbar-thumb:hover": {
       bg: mode("primary.500", "primary.400")(props),

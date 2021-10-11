@@ -28,27 +28,28 @@ const HomePage: NextPage = () => {
             An indie product maker.
           </Text>
         </Stack>
-        <HStack divider={<StackDivider />}>
-          {links.map((link, index) => (
-            <Tooltip key={index} label={link.name}>
-              <IconButton
-                as={Link}
-                href={link.link}
-                isExternal
-                aria-label={link.name}
-                size="xl"
-                variant="ghost"
-                {...(link.bg && {
-                  _hover: {
-                    bgColor: link.bg,
-                  },
-                })}
-                icon={<Icon as={link.icon} boxSize="12" />}
-                rounded="full"
-                colorScheme="primary"
-              />
-            </Tooltip>
-          ))}
+        <HStack>
+          <Text fontSize={{ base: "md", md: "lg" }} fontWeight="medium">
+            Working on:
+          </Text>
+          <HStack divider={<StackDivider />}>
+            {links.map((link, index) => (
+              <Tooltip key={index} label={link.name}>
+                <IconButton
+                  as={Link}
+                  href={link.link}
+                  isExternal
+                  aria-label={link.name}
+                  size="xl"
+                  variant="ghost"
+                  bgColor={link.bg}
+                  icon={<Icon as={link.icon} boxSize="12" />}
+                  rounded="full"
+                  colorScheme="primary"
+                />
+              </Tooltip>
+            ))}
+          </HStack>
         </HStack>
       </Stack>
     </Center>

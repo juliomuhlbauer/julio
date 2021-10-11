@@ -1,3 +1,4 @@
+import { meta } from "@/data";
 import Layout from "@/layout";
 import theme from "@/theme";
 import { ChakraProvider } from "@chakra-ui/react";
@@ -17,13 +18,6 @@ import NProgress from "nprogress";
 Router.events.on("routeChangeStart", () => NProgress.start());
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
-
-const meta = {
-  title: "Júlio Werner",
-  url: "https://juliowerner.com",
-  description: "Júlio Werner is an indie product maker",
-  banner: "https://juliowerner.com/banner.png",
-};
 
 const Analytics = () => {
   const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID;

@@ -25,7 +25,9 @@ const secondary = {
 };
 
 const glass = {
-  50: "#FFFFFF05",
+  50: "#ff3d2405",
+  100: "#ff3d2410",
+  700: "#ff3d2470",
 };
 
 const colors = {

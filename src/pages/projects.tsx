@@ -41,8 +41,17 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   const theme = useTheme();
 
   return (
-    <WrapItem>
-      <Link href={project.link} isExternal rounded="md" _hover={{}}>
+    <Stack as="li" spacing={4}>
+      <Heading size="lg" color="gray.200">
+        {project.year}
+      </Heading>
+      <Link
+        pos="relative"
+        href={project.link}
+        isExternal
+        rounded="lg"
+        _hover={{}}
+      >
         <Image
           src={project.banner}
           objectFit="cover"
@@ -62,11 +71,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
 
         <Container
           zIndex={2}
-          position="relative"
-          top={-12}
+          bottom={0}
           p={2}
+          pos="absolute"
           rounded="lg"
-          bgColor="glass.50"
+          bgColor="glass.100"
           sx={{
             backdropFilter: "saturate(180%) blur(50px)",
           }}
@@ -79,7 +88,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
               height="64px"
               zIndex={3}
               rounded="md"
-              position="relative"
+              pos="relative"
               left={8}
               placeholder="blur"
             />
@@ -87,6 +96,6 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
           </HStack>
         </Container>
       </Link>
-    </WrapItem>
+    </Stack>
   );
 };

@@ -60,19 +60,19 @@ const About: NextPage = () => {
           <Stack as="ul" spacing={4}>
             {skills.map((skill, index) => (
               <HStack
-                as="li"
                 key={index}
+                as="li"
                 spacing={4}
                 p={4}
                 rounded="lg"
                 color="primary.200"
-                bgColor="glass.50"
+                bgColor="glass.100"
                 backdropFilter="saturate(150%) blur(25px)"
-                boxShadow={`0 2px 50px -25px ${theme.colors.primary[500]}50`}
+                // boxShadow={`0 2px 50px -25px ${theme.colors.primary[500]}50`}
                 transition="all 0.25s ease"
                 _hover={{
                   transform: "scale(1.05)",
-                  boxShadow: `0 2px 50px -25px ${theme.colors.primary[500]}75`,
+                  // boxShadow: `0 2px 50px -25px ${theme.colors.primary[500]}75`,
                 }}
               >
                 <Icon boxSize={8} as={skill.icon} />
