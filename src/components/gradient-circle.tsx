@@ -1,7 +1,7 @@
 import { BoxProps, Circle } from "@chakra-ui/layout";
 import { FC } from "react";
 
-const GradientCircle: FC<BoxProps> = ({ animation, ...rest }) => {
+export const GradientCircle: FC<BoxProps> = ({ animation, ...rest }) => {
   return (
     <Circle
       position="absolute"
@@ -25,5 +25,3 @@ const GradientCircle: FC<BoxProps> = ({ animation, ...rest }) => {
     />
   );
 };
-
-export default GradientCircle;

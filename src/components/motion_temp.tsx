@@ -6,6 +6,4 @@ type Merge<P, T> = Omit<P, keyof T> & T;
 
 type MotionProps = Merge<HTMLChakraProps<"div">, HTMLMotionProps<"div">>;
 
-const Motion: FC<MotionProps> = motion(chakra.div);
-
-export default Motion;
+export const Motion: FC<MotionProps> = motion(chakra.div);

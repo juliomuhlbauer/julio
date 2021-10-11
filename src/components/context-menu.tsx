@@ -4,8 +4,9 @@ import Icon from "@chakra-ui/icon";
 import { Box, Link } from "@chakra-ui/layout";
 import { Menu, MenuDivider, MenuItem, MenuList } from "@chakra-ui/menu";
 import NextLink from "next/link";
+import { FC } from "react";
 
-const ContextMenu = () => {
+export const ContextMenu: FC = () => {
   const { anchorPoint, contextMenu } = useContextMenu();
 
   return (
@@ -57,5 +58,3 @@ const ContextMenu = () => {
     </Box>
   );
 };
-
-export default ContextMenu;
