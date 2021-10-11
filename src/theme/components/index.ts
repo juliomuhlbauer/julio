@@ -1,5 +1,5 @@
-import Button from "./button_temp";
-import Link from "./link_temp";
+import Button from "./button";
+import Link from "./link";
 
 const components = {
   Button,
