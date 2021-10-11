@@ -1,4 +1,4 @@
-import Image from "@/components/image";
+import { Image } from "@/components/iamge_temp";
 import { projects, ProjectsProps } from "@/data";
 import {
   Container,

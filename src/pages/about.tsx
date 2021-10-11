@@ -1,4 +1,4 @@
-import Image from "@/components/image";
+import { Image } from "@/components/iamge_temp";
 import { skills } from "@/data";
 import Icon from "@chakra-ui/icon";
 import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/layout";
