@@ -6,7 +6,7 @@ import { Box, Container, Stack } from "@chakra-ui/layout";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
 import { FC } from "react";
-import { Motion } from "../components/motion_temp";
+import { Motion } from "../components/motion";
 
 const ContextMenu = dynamic<{}>(
   () =>

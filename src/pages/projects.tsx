@@ -1,13 +1,6 @@
-import { Image } from "@/components/iamge_temp";
+import { Image } from "@/components/image";
 import { projects, ProjectsProps } from "@/data";
-import {
-  Container,
-  Heading,
-  HStack,
-  Link,
-  Stack,
-  WrapItem,
-} from "@chakra-ui/layout";
+import { Container, Heading, HStack, Link, Stack } from "@chakra-ui/layout";
 import { useTheme } from "@chakra-ui/system";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
