@@ -43,7 +43,11 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
         href={project.link}
         isExternal
         rounded="lg"
-        _hover={{}}
+        boxShadow={`0 25px 50px -10px ${theme.colors.primary[500]}50`}
+        transition="all 0.2s ease-in-out"
+        _hover={{
+          boxShadow: `0 25px 50px -10px ${theme.colors.primary[500]}75`,
+        }}
       >
         <Image
           src={project.banner}
