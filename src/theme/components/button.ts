@@ -1,10 +1,8 @@
 import { ComponentSingleStyleConfig } from "@chakra-ui/react";
-import { ringStyle } from "../styles";
 import { pointerCursor } from "../styles";
 
 const Button: ComponentSingleStyleConfig = {
   baseStyle: {
-    ...ringStyle,
     ...pointerCursor,
   },
   sizes: {

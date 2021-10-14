@@ -20,6 +20,9 @@ const theme = extendTheme({
   colors,
   components,
   styles: globalStyles,
+  shadows: {
+    outline: `0 0 0 1px ${colors.primary[200]}`,
+  },
 });
 
 export default theme;
