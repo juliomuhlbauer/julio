@@ -1,5 +1,5 @@
 import { GradientCircle } from "@/components/gradient-circle";
-import { useMedia } from "@/hooks";
+
 import BottomNav from "@/layout/bottom-nav";
 import Header from "@/layout/header";
 import { Box, Container, Stack } from "@chakra-ui/layout";
@@ -20,8 +20,6 @@ const ContextMenu = dynamic<{}>(
 const Layout: FC = ({ children }) => {
   const router = useRouter();
 
-  const { isMd } = useMedia();
-
   return (
     <>
       <ContextMenu />
@@ -39,9 +37,7 @@ const Layout: FC = ({ children }) => {
           h="100%"
           py={4}
           maxW="container.md"
-          {...(isMd && {
-            mb: 64,
-          })}
+          mb={{ base: 0, mb: 64 }}
         >
           <Motion
             key={router.route}

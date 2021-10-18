@@ -1,6 +1,6 @@
-import colors from "./colors";
-import components from "./components";
-import { globalStyles } from "./styles";
+import colors from "@/theme/colors";
+import components from "@/theme/components";
+import { globalStyles } from "@/theme/styles";
 import { extendTheme } from "@chakra-ui/react";
 import { theme as base, ThemeConfig } from "@chakra-ui/theme";
 

@@ -1,5 +1,4 @@
 import { pages } from "@/data";
-import { useMedia } from "@/hooks";
 import { IconButton } from "@chakra-ui/button";
 import Icon from "@chakra-ui/icon";
 import { Box, HStack } from "@chakra-ui/layout";
@@ -7,14 +6,15 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 const BottomNav = () => {
-  const { isMd } = useMedia();
-
   const router = useRouter();
 
-  if (!isMd) return <></>;
-
   return (
-    <Box zIndex="10" position="fixed" bottom={4}>
+    <Box
+      zIndex="10"
+      position="fixed"
+      bottom={4}
+      d={{ base: "block", md: "none" }}
+    >
       <HStack
         as="nav"
         justify="center"

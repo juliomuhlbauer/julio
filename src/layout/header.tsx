@@ -1,5 +1,4 @@
 import { pages, socials } from "@/data";
-import { useMedia } from "@/hooks";
 import { JWIcon } from "@/theme/icons";
 import { Button, IconButton } from "@chakra-ui/button";
 import Icon from "@chakra-ui/icon";
@@ -9,8 +8,6 @@ import NextLink from "next/link";
 import { useRouter } from "next/router";
 
 const Header = () => {
-  const { isMd } = useMedia();
-
   const router = useRouter();
 
   return (
@@ -26,7 +23,7 @@ const Header = () => {
         borderRadius="lg"
         py={2}
         px={4}
-        bgColor={isMd ? "transparent" : "glass.50"}
+        bgColor="glass.50"
         justify="space-between"
         sx={{
           backdropFilter: "saturate(150%) blur(25px)",
@@ -45,27 +42,26 @@ const Header = () => {
             />
           </Link>
         </NextLink>
-        {!isMd && (
-          <HStack as="nav" spacing={4}>
-            {pages.map(({ href, label }) => (
-              <NextLink href={href} key={href} passHref>
-                <Button
-                  as="a"
-                  key={href}
-                  colorScheme="primary"
-                  variant="ghost"
-                  fontWeight="bold"
-                  fontSize="xl"
-                  {...(router.asPath === href && {
-                    variant: "outline",
-                  })}
-                >
-                  {label}
-                </Button>
-              </NextLink>
-            ))}
-          </HStack>
-        )}
+
+        <HStack as="nav" spacing={4} d={{ base: "none", md: "flex" }}>
+          {pages.map(({ href, label }) => (
+            <NextLink href={href} key={href} passHref>
+              <Button
+                as="a"
+                key={href}
+                colorScheme="primary"
+                variant="ghost"
+                fontWeight="bold"
+                fontSize="xl"
+                {...(router.asPath === href && {
+                  variant: "outline",
+                })}
+              >
+                {label}
+              </Button>
+            </NextLink>
+          ))}
+        </HStack>
 
         <HStack as="nav" spacing={4}>
           {socials.map((social, index) => (
