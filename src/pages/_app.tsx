@@ -1,6 +1,6 @@
 import { meta } from "@/data";
-import Layout from "@/layout";
-import theme from "@/theme";
+import { Layout } from "@/layout";
+import { theme } from "@/theme";
 import { ChakraProvider } from "@chakra-ui/react";
 import "@fontsource/inter/400.css";
 import "@fontsource/inter/500.css";
@@ -75,7 +75,7 @@ const SEO = () => {
   );
 };
 
-function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
@@ -90,5 +90,5 @@ function App({ Component, pageProps }: AppProps) {
       </ChakraProvider>
     </>
   );
-}
+};
 export default App;

@@ -7,7 +7,7 @@ import VisuallyHidden from "@chakra-ui/visually-hidden";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
-const Header = () => {
+export const Header = () => {
   const router = useRouter();
 
   return (
@@ -82,5 +82,3 @@ const Header = () => {
     </Container>
   );
 };
-
-export default Header;

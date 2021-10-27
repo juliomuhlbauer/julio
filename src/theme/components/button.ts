@@ -1,7 +1,7 @@
 import { ComponentSingleStyleConfig } from "@chakra-ui/react";
 import { pointerCursor } from "../styles";
 
-const Button: ComponentSingleStyleConfig = {
+export const Button: ComponentSingleStyleConfig = {
   baseStyle: {
     ...pointerCursor,
   },
@@ -14,5 +14,3 @@ const Button: ComponentSingleStyleConfig = {
     },
   },
 };
-
-export default Button;

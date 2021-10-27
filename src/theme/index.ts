@@ -1,5 +1,5 @@
-import colors from "@/theme/colors";
-import components from "@/theme/components";
+import { colors } from "@/theme/colors";
+import { components } from "@/theme/components";
 import { globalStyles } from "@/theme/styles";
 import { extendTheme } from "@chakra-ui/react";
 import { theme as base, ThemeConfig } from "@chakra-ui/theme";
@@ -14,7 +14,7 @@ const fonts = {
   body: `Inter, ${base.fonts.body}`,
 };
 
-const theme = extendTheme({
+export const theme = extendTheme({
   config,
   fonts,
   colors,
@@ -24,5 +24,3 @@ const theme = extendTheme({
     outline: `0 0 0 1px ${colors.primary[200]}`,
   },
 });
-
-export default theme;

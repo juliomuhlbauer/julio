@@ -5,7 +5,7 @@ import { Box, HStack } from "@chakra-ui/layout";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
-const BottomNav = () => {
+export const BottomNav = () => {
   const router = useRouter();
 
   return (
@@ -49,5 +49,3 @@ const BottomNav = () => {
     </Box>
   );
 };
-
-export default BottomNav;

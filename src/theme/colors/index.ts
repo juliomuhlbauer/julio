@@ -30,10 +30,8 @@ const glass = {
   700: "#ff3d2470",
 };
 
-const colors = {
+export const colors = {
   primary,
   secondary,
   glass,
 };
-
-export default colors;

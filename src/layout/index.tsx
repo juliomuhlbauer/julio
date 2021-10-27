@@ -1,7 +1,7 @@
 import { GradientCircle } from "@/components/gradient-circle";
 
-import BottomNav from "@/layout/bottom-nav";
-import Header from "@/layout/header";
+import { BottomNav } from "@/layout/bottom-nav";
+import { Header } from "@/layout/header";
 import { Box, Container, Stack } from "@chakra-ui/layout";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
@@ -17,7 +17,7 @@ const ContextMenu = dynamic<{}>(
   }
 );
 
-const Layout: FC = ({ children }) => {
+export const Layout: FC = ({ children }) => {
   const router = useRouter();
 
   return (
@@ -56,5 +56,3 @@ const Layout: FC = ({ children }) => {
     </>
   );
 };
-
-export default Layout;

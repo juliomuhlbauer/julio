@@ -1,9 +1,7 @@
-import Button from "./button";
-import Link from "./link";
+import { Button } from "./button";
+import { Link } from "./link";
 
-const components = {
+export const components = {
   Button,
   Link,
 };
-
-export default components;
