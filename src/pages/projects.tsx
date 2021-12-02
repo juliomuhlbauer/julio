@@ -21,7 +21,7 @@ const Projects: NextPage = () => {
         <Heading size="2xl" fontWeight="extrabold" color="primary.200">
           Projects
         </Heading>
-        <Stack as="ul" align="center" spacing={16}>
+        <Stack as="ul" align="center" spacing={16} pb={32}>
           {projects.map((project, index) => (
             <ProjectItem key={index} project={project} index={index} />
           ))}
