@@ -6,9 +6,14 @@ import { Container, HStack, Link } from "@chakra-ui/layout";
 import VisuallyHidden from "@chakra-ui/visually-hidden";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
+import useSound from "use-sound";
 
 export const Header = () => {
   const router = useRouter();
+
+  const [playPing] = useSound("/sounds/ping.mp3", {
+    volume: 0.25,
+  });
 
   return (
     <Container
@@ -39,6 +44,9 @@ export const Header = () => {
               w={20}
               icon={<JWIcon boxSize={{ base: 14, md: 16 }} />}
               colorScheme="primary"
+              onClick={() => {
+                playPing();
+              }}
             />
           </Link>
         </NextLink>
@@ -56,6 +64,9 @@ export const Header = () => {
                 {...(router.asPath === href && {
                   variant: "outline",
                 })}
+                onClick={() => {
+                  playPing();
+                }}
               >
                 {label}
               </Button>
@@ -75,6 +86,9 @@ export const Header = () => {
               icon={<Icon as={social.icon} boxSize={6} />}
               href={social.link}
               isExternal
+              onClick={() => {
+                playPing();
+              }}
             />
           ))}
         </HStack>

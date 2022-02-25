@@ -4,9 +4,14 @@ import Icon from "@chakra-ui/icon";
 import { Box, HStack } from "@chakra-ui/layout";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
+import useSound from "use-sound";
 
 export const BottomNav = () => {
   const router = useRouter();
+
+  const [playPing] = useSound("/sounds/ping.mp3", {
+    volume: 0.25,
+  });
 
   return (
     <Box
@@ -42,6 +47,9 @@ export const BottomNav = () => {
                 bgColor: "primary.200",
                 color: "gray.900",
               })}
+              onClick={() => {
+                playPing();
+              }}
             />
           </NextLink>
         ))}
