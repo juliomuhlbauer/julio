@@ -1,4 +1,4 @@
-import { RDFIcon } from "@/theme/icons";
+import { RDFIcon, TwinsterIcon } from "@/theme/icons";
 import { FC } from "react";
 
 export interface LinkProps {
@@ -9,6 +9,12 @@ export interface LinkProps {
 }
 
 export const links: LinkProps[] = [
+  {
+    name: "Twinster",
+    link: "https://twinster.app",
+    icon: TwinsterIcon,
+    bg: "#1C2732",
+  },
   {
     name: "A Rede do Futuro",
     link: "https://arededofuturo.com.br/",

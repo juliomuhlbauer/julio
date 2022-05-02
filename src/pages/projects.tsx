@@ -18,7 +18,7 @@ const Projects: NextPage = () => {
     <>
       <NextSeo title="Projects" />
       <Stack as="section" spacing={8}>
-        <Heading size="2xl" fontWeight="extrabold" color="primary.200">
+        <Heading size="2xl" fontWeight="extrabold" color="accent">
           Projects
         </Heading>
         <Stack as="ul" align="center" spacing={16} pb={32}>

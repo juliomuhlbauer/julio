@@ -12,11 +12,11 @@
     "postbuild": "next-sitemap --config next-sitemap.config.js"
   },
   "dependencies": {
-    "@chakra-ui/react": "1.8.3",
+    "@chakra-ui/react": "1.8.6",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "@fontsource/inter": "^4.5.0",
-    "framer-motion": "^5",
+    "framer-motion": "^6",
     "next": "12.0.4",
     "next-seo": "^4.28.1",
     "next-sitemap": "^1.6",
@@ -27,7 +27,7 @@
     "use-sound": "^4.0.1"
   },
   "devDependencies": {
-    "@chakra-ui/cli": "1.8.1",
+    "@chakra-ui/cli": "1.9",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17",
     "eslint": "7.32.0",

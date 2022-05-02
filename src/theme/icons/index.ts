@@ -1,2 +1,3 @@
-export * from "./jw-icon";
-export * from "./rdf-icon";
+export * from "./jw";
+export * from "./rdf";
+export * from "./twinster";

@@ -6,6 +6,9 @@ export interface ProjectsProps {
   year: string;
 }
 
+import TwinsterBanner from "public/projects/twinster/banner.png";
+import TwinsterLogo from "public/projects/twinster/logo.png";
+
 import RDFBanner from "public/projects/RDF-LP.png";
 import RDFLogo from "public/projects/RDF-logo.png";
 
@@ -16,6 +19,13 @@ import InboxIcon from "public/projects/inbox-icon.png";
 import InboxBanner from "public/projects/inbox-banner.png";
 
 export const projects: ProjectsProps[] = [
+  {
+    name: "Twinster",
+    link: "https://twinster.app",
+    banner: TwinsterBanner,
+    logo: TwinsterLogo,
+    year: "2022-now",
+  },
   {
     name: "A Rede do Futuro",
     link: "https://arededofuturo.com.br/",

@@ -18,6 +18,11 @@ export const theme = extendTheme({
   config,
   fonts,
   colors,
+  semanticTokens: {
+    colors: {
+      accent: "primary.200",
+    },
+  },
   components,
   styles: globalStyles,
   shadows: {
