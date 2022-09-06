@@ -4,7 +4,7 @@ export const useContextMenu = () => {
   const [anchorPoint, setAnchorPoint] = useState({ x: 0, y: 0 });
   const [contextMenu, setContextMenu] = useState(false);
 
-  const handleContextMenu = useCallback((event) => {
+  const handleContextMenu = useCallback((event: MouseEvent) => {
     event.preventDefault();
     setAnchorPoint({ x: event.pageX, y: event.pageY });
     setContextMenu(true);

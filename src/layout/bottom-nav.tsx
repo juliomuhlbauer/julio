@@ -18,7 +18,7 @@ export const BottomNav = () => {
       zIndex="10"
       position="fixed"
       bottom={4}
-      d={{ base: "block", md: "none" }}
+      display={{ base: "block", md: "none" }}
     >
       <HStack
         as="nav"

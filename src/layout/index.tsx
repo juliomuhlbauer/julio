@@ -5,7 +5,7 @@ import { Header } from "@/layout/header";
 import { Box, Container, Stack } from "@chakra-ui/layout";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { Motion } from "../components/motion";
 
 const ContextMenu = dynamic<{}>(
@@ -17,7 +17,9 @@ const ContextMenu = dynamic<{}>(
   }
 );
 
-export const Layout: FC = ({ children }) => {
+export const Layout: FC<{
+  children: ReactNode;
+}> = ({ children }) => {
   const router = useRouter();
 
   return (

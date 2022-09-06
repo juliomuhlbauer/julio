@@ -5,7 +5,7 @@ import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/layout";
 import { useTheme } from "@chakra-ui/system";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import Profile from "public/julio.png";
+import Profile from "public/julio.jpg";
 
 const About: NextPage = () => {
   const theme = useTheme();

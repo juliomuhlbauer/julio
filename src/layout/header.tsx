@@ -51,7 +51,7 @@ export const Header = () => {
           </Link>
         </NextLink>
 
-        <HStack as="nav" spacing={4} d={{ base: "none", md: "flex" }}>
+        <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
           {pages.map(({ href, label }) => (
             <NextLink href={href} key={href} passHref>
               <Button
