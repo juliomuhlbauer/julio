@@ -10,22 +10,22 @@ export interface SocialProps {
 export const socials: SocialProps[] = [
   {
     name: "Instagram",
-    link: "https://www.instagram.com/juliowerner_/",
+    link: "https://www.instagram.com/juliomuhlbauer/",
     icon: FaInstagram,
   },
   {
     name: "Twitter",
-    link: "https://twitter.com/julio_werner_",
+    link: "https://twitter.com/juliomuhlbauer",
     icon: FaTwitter,
   },
   {
     name: "LinkedIn",
-    link: "https://www.linkedin.com/in/julio-werner/",
+    link: "https://www.linkedin.com/in/juliomuhlbauer",
     icon: FaLinkedin,
   },
   {
     name: "GitHub",
-    link: "https://github.com/julio-werner/",
+    link: "https://github.com/juliomuhlbauer",
     icon: FaGithub,
   },
 ];

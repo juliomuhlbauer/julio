@@ -25,7 +25,7 @@ const HomePage: NextPage = () => {
             Júlio Werner
           </Heading>
           <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="semibold">
-            An indie product maker.
+            I like solving problems.
           </Text>
         </Stack>
         <HStack>
