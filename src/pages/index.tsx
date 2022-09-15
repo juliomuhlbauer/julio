@@ -22,7 +22,7 @@ const HomePage: NextPage = () => {
             bgGradient="linear(to-r, primary.500, #FFE345)"
             bgClip="text"
           >
-            Júlio Muhlbauer
+            Júlio Mühlbauer
           </Heading>
           <Text fontSize={{ base: "lg", md: "xl" }} fontWeight="semibold">
             I like solving problems.
