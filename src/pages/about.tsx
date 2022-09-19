@@ -1,11 +1,20 @@
 import { Image } from "@/components/image";
-import { skills } from "@/data";
+import { projects, skills } from "@/data";
 import Icon from "@chakra-ui/icon";
-import { Box, Heading, HStack, Stack, Text } from "@chakra-ui/layout";
+import {
+  Box,
+  Heading,
+  HStack,
+  Stack,
+  Text,
+  LinkOverlay,
+  LinkBox,
+} from "@chakra-ui/react";
 import { useTheme } from "@chakra-ui/system";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import Profile from "public/julio.jpg";
+import { GetServerSideProps } from "next";
 
 const About: NextPage = () => {
   const theme = useTheme();
@@ -55,6 +64,90 @@ const About: NextPage = () => {
 
         <Stack as="section" spacing={8}>
           <Heading fontWeight="extrabold" color="primary.200">
+            Experience
+          </Heading>
+          <Stack as="ul" spacing={4}>
+            {projects.map((project, index) => (
+              <LinkBox key={index}>
+                <HStack
+                  as="li"
+                  spacing={4}
+                  p={4}
+                  rounded="lg"
+                  color="primary.200"
+                  bgColor="glass.100"
+                  backdropFilter="saturate(150%) blur(25px)"
+                  // boxShadow={`0 2px 50px -25px ${theme.colors.primary[500]}50`}
+                  transition="all 0.25s ease"
+                  _hover={{
+                    transform: "scale(1.05)",
+                    // boxShadow: `0 2px 50px -25px ${theme.colors.primary[500]}75`,
+                  }}
+                >
+                  <Image
+                    src={project.logo}
+                    alt={project.name}
+                    width="48px"
+                    height="48px"
+                    zIndex={3}
+                    rounded="md"
+                    pos="relative"
+                    left={8}
+                    placeholder="blur"
+                  />
+                  <LinkOverlay href={project.link} isExternal>
+                    <Heading size="md">{project.name}</Heading>
+                  </LinkOverlay>
+                </HStack>
+              </LinkBox>
+            ))}
+          </Stack>
+        </Stack>
+
+        <Stack as="section" spacing={8}>
+          <Heading fontWeight="extrabold" color="primary.200">
+            Experience
+          </Heading>
+          <Stack as="ul" spacing={4}>
+            {projects.map((project, index) => (
+              <LinkBox key={index}>
+                <HStack
+                  as="li"
+                  spacing={4}
+                  p={4}
+                  rounded="lg"
+                  color="primary.200"
+                  bgColor="glass.100"
+                  backdropFilter="saturate(150%) blur(25px)"
+                  // boxShadow={`0 2px 50px -25px ${theme.colors.primary[500]}50`}
+                  transition="all 0.25s ease"
+                  _hover={{
+                    transform: "scale(1.05)",
+                    // boxShadow: `0 2px 50px -25px ${theme.colors.primary[500]}75`,
+                  }}
+                >
+                  <Image
+                    src={project.logo}
+                    alt={project.name}
+                    width="48px"
+                    height="48px"
+                    zIndex={3}
+                    rounded="md"
+                    pos="relative"
+                    left={8}
+                    placeholder="blur"
+                  />
+                  <LinkOverlay href={project.link} isExternal>
+                    <Heading size="md">{project.name}</Heading>
+                  </LinkOverlay>
+                </HStack>
+              </LinkBox>
+            ))}
+          </Stack>
+        </Stack>
+
+        {/* <Stack as="section" spacing={8}>
+          <Heading fontWeight="extrabold" color="primary.200">
             Skills
           </Heading>
           <Stack as="ul" spacing={4}>
@@ -80,10 +173,20 @@ const About: NextPage = () => {
               </HStack>
             ))}
           </Stack>
-        </Stack>
+        </Stack> */}
       </Stack>
     </>
   );
 };
 
 export default About;
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination:
+        "https://juliomuhlbauer.notion.site/e02c1e93431346e0b5c34ca6f11acb83",
+      permanent: false,
+    },
+  };
+};
