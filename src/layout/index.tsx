@@ -49,8 +49,8 @@ export const Layout: FC<{
           fill
         />
         <svg
-          width="1440"
-          height="1024"
+          width="100%"
+          height="100%"
           viewBox="0 0 1440 1024"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ export const Layout: FC<{
               width="2399.53"
               height="2338.34"
               filterUnits="userSpaceOnUse"
-              color-interpolation-filters="sRGB"
+              colorInterpolationFilters="sRGB"
             >
               <feFlood flood-opacity="0" result="BackgroundImageFix" />
               <feBlend
