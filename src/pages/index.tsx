@@ -66,7 +66,7 @@ const HomePage: NextPage = () => {
           _hover={{
             transform: "scale(1.05)",
           }}
-          alt="Júlio Werner"
+          alt="Júlio Mühlbauer"
           boxShadow="md"
         />
       </Stack>

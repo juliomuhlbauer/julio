@@ -29,7 +29,7 @@ export const ContextMenu: FC = () => {
           position="absolute"
           zIndex="popover"
           overflow="hidden"
-          color="primary.50"
+          // color="primary.50"
           bgColor="glass.50"
           backdropFilter="saturate(150%) blur(50px)"
         >
