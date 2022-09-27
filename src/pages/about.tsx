@@ -1,6 +1,5 @@
 import { Image } from "@/components/image";
 import { projects, skills } from "@/data";
-import Icon from "@chakra-ui/icon";
 import {
   Box,
   Heading,
@@ -48,9 +47,8 @@ const About: NextPage = () => {
             <Image
               src={Profile}
               placeholder="blur"
-              width="300px"
-              height="300px"
-              layout="responsive"
+              width="300"
+              height="300"
               objectFit="contain"
               rounded="xl"
               transition="all 0.2s ease-in-out"

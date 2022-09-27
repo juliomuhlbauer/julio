@@ -7,6 +7,8 @@ import VisuallyHidden from "@chakra-ui/visually-hidden";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import useSound from "use-sound";
+import ProfileImg from "public/julio.jpg";
+import { Image } from "@/components/image";
 
 export const Header = () => {
   const router = useRouter();
@@ -35,18 +37,21 @@ export const Header = () => {
         }}
       >
         <NextLink href="/" passHref>
-          <Link>
-            <VisuallyHidden>JW Logo</VisuallyHidden>
-            <IconButton
-              variant="ghost"
-              aria-label="JW Logo"
-              h={16}
-              w={20}
-              icon={<JWIcon boxSize={{ base: 14, md: 16 }} />}
-              colorScheme="primary"
-              onClick={() => {
-                playPing();
-              }}
+          <Link
+            onClick={() => {
+              playPing();
+            }}
+          >
+            <Image
+              src={ProfileImg}
+              placeholder="blur"
+              boxSize={14}
+              objectFit="contain"
+              rounded="full"
+              alt="Júlio Werner"
+              boxShadow="md"
+              ring={2}
+              ringColor="accent"
             />
           </Link>
         </NextLink>
@@ -61,12 +66,17 @@ export const Header = () => {
                 variant="ghost"
                 fontWeight="bold"
                 fontSize="xl"
-                {...(router.asPath === href && {
-                  variant: "outline",
-                })}
                 onClick={() => {
                   playPing();
                 }}
+                color="default"
+                _hover={{
+                  color: "accent",
+                }}
+                {...(router.asPath === href && {
+                  textDecoration: "underline",
+                  color: "accent",
+                })}
               >
                 {label}
               </Button>
@@ -82,12 +92,16 @@ export const Header = () => {
               aria-label={social.name}
               rounded="full"
               colorScheme="primary"
+              color="default"
               variant="ghost"
               icon={<Icon as={social.icon} boxSize={6} />}
               href={social.link}
               isExternal
               onClick={() => {
                 playPing();
+              }}
+              _hover={{
+                color: "accent",
               }}
             />
           ))}

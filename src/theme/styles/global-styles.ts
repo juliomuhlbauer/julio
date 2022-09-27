@@ -16,8 +16,8 @@ export const globalStyles: Styles = {
       WebkitTapHighlightColor: "transparent",
     },
     body: {
-      bg: mode("gray.100", "gray.900")(props),
-      color: mode("gray.700", "gray.200")(props),
+      bg: "bg",
+      color: "default",
       ...defaultCursor,
     },
 
