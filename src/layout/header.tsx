@@ -1,5 +1,4 @@
 import { pages, socials } from "@/data";
-import { JWIcon } from "@/theme/icons";
 import { Button, IconButton } from "@chakra-ui/button";
 import Icon from "@chakra-ui/icon";
 import { Container, HStack, Link } from "@chakra-ui/layout";
@@ -48,7 +47,7 @@ export const Header = () => {
               boxSize={14}
               objectFit="contain"
               rounded="full"
-              alt="Júlio Werner"
+              alt="Júlio Mühlbauer"
               boxShadow="md"
               ring={2}
               ringColor="accent"

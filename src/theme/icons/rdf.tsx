@@ -1,7 +1,7 @@
 import { createIcon } from "@chakra-ui/react";
 
 export const RDFIcon = createIcon({
-  displayName: "JWIcon",
+  displayName: "RDFIcon",
   viewBox: "0 0 1080 1080",
   path: (
     <>

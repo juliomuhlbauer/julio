@@ -50,11 +50,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project, index }) => {
         href={project.link}
         isExternal
         rounded="lg"
-        boxShadow={`0 25px 50px -10px ${theme.colors.primary[500]}50`}
         transition="all 0.2s ease-in-out"
-        _hover={{
-          boxShadow: `0 25px 50px -10px ${theme.colors.primary[500]}75`,
-        }}
       >
         <Image
           src={project.banner}
@@ -63,12 +59,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project, index }) => {
           width="600px"
           height="350px"
           rounded="lg"
-          boxShadow={`0 25px 100px -5px ${theme.colors.primary[500]}50`}
           transition="all 0.25s ease"
-          _hover={{
-            transform: "scale(1.05)",
-            boxShadow: `0 25px 100px -5px ${theme.colors.primary[500]}60`,
-          }}
           alt={project.name}
           placeholder="blur"
         />

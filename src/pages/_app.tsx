@@ -75,7 +75,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/logo.svg" />
+        <link rel="shortcut icon" href={config.icons.web} />
       </Head>
       <SEO />
       {process.env.NODE_ENV !== "development" && <Analytics />}

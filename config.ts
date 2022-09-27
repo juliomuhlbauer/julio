@@ -4,8 +4,8 @@ export const config = {
   description: "Full Stack Developer and Health Generalist",
   banner: "https://juliomuhlbauer.com/banner.jpg",
   icons: {
-    web: "/logo.svg",
-    app: "/logo.svg",
+    web: "/julio.jpg",
+    app: "/julio.jpg",
   },
   handle: "@juliomuhlbauer",
 };

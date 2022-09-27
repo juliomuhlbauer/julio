@@ -15,6 +15,7 @@
     "@chakra-ui/react": "^2.3.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@nikolovlazar/chakra-ui-prose": "^1.2.1",
     "firebase-admin": "^11.0.1",
     "framer-motion": "^7",
     "mixpanel-browser": "^2.45.0",

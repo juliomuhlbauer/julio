@@ -1,190 +1,141 @@
-import { Image } from "@/components/image";
-import { projects, skills } from "@/data";
-import {
-  Box,
-  Heading,
-  HStack,
-  Stack,
-  Text,
-  LinkOverlay,
-  LinkBox,
-} from "@chakra-ui/react";
-import { useTheme } from "@chakra-ui/system";
-import { NextPage } from "next";
+import { Container, Heading } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
-import Profile from "public/julio.jpg";
-import { GetServerSideProps } from "next";
+import { Prose } from "@nikolovlazar/chakra-ui-prose";
 
-const About: NextPage = () => {
-  const theme = useTheme();
+const AboutContent = () => {
+  return (
+    <>
+      <ul>
+        <li>Hi, I’m 19 years old</li>
+        <li>I love health and technology</li>
+        <li>Full stack dev and health generalist</li>
+        <li>São Paulo, Brazil</li>
+      </ul>
 
+      <h3 id="experience">Experience</h3>
+      <ul>
+        <li>
+          Twinster (2022)
+          <ul>
+            <li>
+              App: <a href="https://twinster.app/">https://twinster.app</a>
+            </li>
+            <li>
+              SaaS of automated conversion of tweets and threads to post on
+              other social medias
+            </li>
+            <li>Role: founder</li>
+          </ul>
+        </li>
+        <li>
+          A Rede do Futuro (2020-today)
+          <ul>
+            <li>
+              Site:{" "}
+              <a href="https://arededofuturo.com.br/">
+                https://arededofuturo.com.br/
+              </a>
+            </li>
+            <li>EdTech de Copywriting</li>
+            <li>Role: designer and developer</li>
+          </ul>
+        </li>
+        <li>
+          Freelancer designer (2016-2020)
+          <ul>
+            <li>
+              JW Filmes:{" "}
+              <a href="https://sites.google.com/view/jw-filmes">
+                https://sites.google.com/view/jw-filmes
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Animations (2014-2016)
+          <ul>
+            <li>
+              YouTube:{" "}
+              <a href="https://www.youtube.com/channel/UCQUbPhQlz0cQG7Km1xovJDg">
+                https://www.youtube.com/channel/UCQUbPhQlz0cQG7Km1xovJDg
+              </a>
+            </li>
+            <li>3D intro animations channel</li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="volunteer">Volunteer</h3>
+      <ul>
+        <li>
+          Complexo Multidimensional Mundo Pleno (Jul/2022)
+          <ul>
+            <li>This was an ecological project in São José dos Campos</li>
+            <li>
+              Our experience there:
+              <ul>
+                <li>Designed and built an vegetable garden</li>
+                <li>Painted an entire shed</li>
+                <li>Cleaned and remove the fences from the road</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="studies">Studies</h3>
+      <ul>
+        <li>
+          Business Administration - Instituto Mauá de Tecnologia (2021-2022)
+        </li>
+      </ul>
+      <h3 id="skills">Skills</h3>
+      <ul>
+        <li>
+          Programming
+          <ul>
+            <li>Languages: medium Typescript and Javascript</li>
+            <li>Fontend: great Nextjs and React</li>
+            <li>Backend: medium Node</li>
+            <li>Styling: great Chakra-UI and CSS</li>
+          </ul>
+        </li>
+        <li>
+          Design
+          <ul>
+            <li>Figma</li>
+            <li>Almost all Adobe softwares</li>
+          </ul>
+        </li>
+      </ul>
+      <h3 id="my-life">My life</h3>
+      <ul>
+        <li>I am chasing my dream to build a small farm with my girlfriend</li>
+        <li>In my free time I like to run, do calisthenics, cook and read</li>
+        <li>
+          For taking a break from work, I like to travel around Brazil,
+          specially on places that have nature and new experiences such as with
+          Worldpackers
+        </li>
+        <li>I am interested in neuroscience, technologies and nutrition</li>
+        <li>
+          My favorite books are Essentialism, Almanack of Naval Ravikant and The
+          Power of the Now
+        </li>
+      </ul>
+    </>
+  );
+};
+
+const About = () => {
   return (
     <>
       <NextSeo title="About" />
-      <Stack spacing={8} pb={32}>
-        <Stack
-          as="section"
-          align="center"
-          justify="space-between"
-          direction={{ base: "column", md: "row" }}
-          spacing={8}
-        >
-          <Stack maxW="sm">
-            <Heading fontWeight="extrabold" color="primary.200">
-              {"Hi, I'm Júlio"}
-            </Heading>
-            <Text fontSize="lg">An indie product maker from Brazil.</Text>
-          </Stack>
-          <Box
-            boxShadow={`0 25px 50px -10px ${theme.colors.primary[500]}50`}
-            transition="all 0.2s ease-in-out"
-            _hover={{
-              boxShadow: `0 25px 50px -10px ${theme.colors.primary[500]}75`,
-            }}
-            rounded="xl"
-            boxSize="300px"
-          >
-            <Image
-              src={Profile}
-              placeholder="blur"
-              width="300"
-              height="300"
-              objectFit="contain"
-              rounded="xl"
-              transition="all 0.2s ease-in-out"
-              _hover={{
-                transform: "scale(1.05)",
-              }}
-              alt="Júlio Werner"
-            />
-          </Box>
-        </Stack>
-
-        <Stack as="section" spacing={8}>
-          <Heading fontWeight="extrabold" color="primary.200">
-            Experience
-          </Heading>
-          <Stack as="ul" spacing={4}>
-            {projects.map((project, index) => (
-              <LinkBox key={index}>
-                <HStack
-                  as="li"
-                  spacing={4}
-                  p={4}
-                  rounded="lg"
-                  color="primary.200"
-                  bgColor="glass.100"
-                  backdropFilter="saturate(150%) blur(25px)"
-                  // boxShadow={`0 2px 50px -25px ${theme.colors.primary[500]}50`}
-                  transition="all 0.25s ease"
-                  _hover={{
-                    transform: "scale(1.05)",
-                    // boxShadow: `0 2px 50px -25px ${theme.colors.primary[500]}75`,
-                  }}
-                >
-                  <Image
-                    src={project.logo}
-                    alt={project.name}
-                    width="48px"
-                    height="48px"
-                    zIndex={3}
-                    rounded="md"
-                    pos="relative"
-                    left={8}
-                    placeholder="blur"
-                  />
-                  <LinkOverlay href={project.link} isExternal>
-                    <Heading size="md">{project.name}</Heading>
-                  </LinkOverlay>
-                </HStack>
-              </LinkBox>
-            ))}
-          </Stack>
-        </Stack>
-
-        <Stack as="section" spacing={8}>
-          <Heading fontWeight="extrabold" color="primary.200">
-            Experience
-          </Heading>
-          <Stack as="ul" spacing={4}>
-            {projects.map((project, index) => (
-              <LinkBox key={index}>
-                <HStack
-                  as="li"
-                  spacing={4}
-                  p={4}
-                  rounded="lg"
-                  color="primary.200"
-                  bgColor="glass.100"
-                  backdropFilter="saturate(150%) blur(25px)"
-                  // boxShadow={`0 2px 50px -25px ${theme.colors.primary[500]}50`}
-                  transition="all 0.25s ease"
-                  _hover={{
-                    transform: "scale(1.05)",
-                    // boxShadow: `0 2px 50px -25px ${theme.colors.primary[500]}75`,
-                  }}
-                >
-                  <Image
-                    src={project.logo}
-                    alt={project.name}
-                    width="48px"
-                    height="48px"
-                    zIndex={3}
-                    rounded="md"
-                    pos="relative"
-                    left={8}
-                    placeholder="blur"
-                  />
-                  <LinkOverlay href={project.link} isExternal>
-                    <Heading size="md">{project.name}</Heading>
-                  </LinkOverlay>
-                </HStack>
-              </LinkBox>
-            ))}
-          </Stack>
-        </Stack>
-
-        {/* <Stack as="section" spacing={8}>
-          <Heading fontWeight="extrabold" color="primary.200">
-            Skills
-          </Heading>
-          <Stack as="ul" spacing={4}>
-            {skills.map((skill, index) => (
-              <HStack
-                key={index}
-                as="li"
-                spacing={4}
-                p={4}
-                rounded="lg"
-                color="primary.200"
-                bgColor="glass.100"
-                backdropFilter="saturate(150%) blur(25px)"
-                // boxShadow={`0 2px 50px -25px ${theme.colors.primary[500]}50`}
-                transition="all 0.25s ease"
-                _hover={{
-                  transform: "scale(1.05)",
-                  // boxShadow: `0 2px 50px -25px ${theme.colors.primary[500]}75`,
-                }}
-              >
-                <Icon boxSize={8} as={skill.icon} />
-                <Heading size="md">{skill.title}</Heading>
-              </HStack>
-            ))}
-          </Stack>
-        </Stack> */}
-      </Stack>
+      <Container>
+        <Prose>
+          <AboutContent />
+        </Prose>
+      </Container>
     </>
   );
 };
 
 export default About;
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    redirect: {
-      destination:
-        "https://juliomuhlbauer.notion.site/e02c1e93431346e0b5c34ca6f11acb83",
-      permanent: false,
-    },
-  };
-};
