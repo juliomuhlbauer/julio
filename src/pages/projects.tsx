@@ -1,14 +1,6 @@
 import { Image } from "@/components/image";
 import { projects, ProjectsProps } from "@/data";
-import {
-  Container,
-  Heading,
-  HStack,
-  Link,
-  Stack,
-  WrapItem,
-} from "@chakra-ui/layout";
-import { useTheme } from "@chakra-ui/system";
+import { Box, Heading, HStack, Link, Stack, WrapItem } from "@chakra-ui/layout";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import { FC } from "react";
@@ -17,15 +9,10 @@ const Projects: NextPage = () => {
   return (
     <>
       <NextSeo title="Projects" />
-      <Stack as="section" spacing={8}>
-        <Heading size="2xl" fontWeight="extrabold" color="accent">
-          Projects
-        </Heading>
-        <Stack as="ul" align="center" spacing={16} pb={32}>
-          {projects.map((project, index) => (
-            <ProjectItem key={index} project={project} index={index} />
-          ))}
-        </Stack>
+      <Stack as="ul" align="center" spacing={16}>
+        {projects.map((project, index) => (
+          <ProjectItem key={index} project={project} />
+        ))}
       </Stack>
     </>
   );
@@ -35,39 +22,29 @@ export default Projects;
 
 interface ProjectItemProps {
   project: ProjectsProps;
-  index: number;
 }
 
-const ProjectItem: FC<ProjectItemProps> = ({ project, index }) => {
-  const theme = useTheme();
-
-  const isOdd = index % 2 === 0;
-
+const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
   return (
     <WrapItem>
-      <Link
-        pos="relative"
-        href={project.link}
-        isExternal
-        rounded="lg"
-        transition="all 0.2s ease-in-out"
-      >
+      <Link pos="relative" href={project.link} isExternal rounded="lg">
         <Image
           src={project.banner}
           objectFit="cover"
           objectPosition="top"
-          width="600px"
-          height="350px"
+          width="600"
+          height="350"
           rounded="lg"
-          transition="all 0.25s ease"
           alt={project.name}
           placeholder="blur"
         />
 
-        <Container
+        <HStack
+          spacing={4}
+          p={4}
+          w="100%"
           zIndex={2}
           bottom={0}
-          p={2}
           pos="absolute"
           rounded="lg"
           bgColor="glass.100"
@@ -75,27 +52,28 @@ const ProjectItem: FC<ProjectItemProps> = ({ project, index }) => {
             backdropFilter: "saturate(180%) blur(50px)",
           }}
         >
-          <HStack justify="space-between" p={2}>
-            <HStack spacing={8}>
-              <Image
-                src={project.logo}
-                alt={project.name}
-                width="64px"
-                height="64px"
-                zIndex={3}
-                rounded="md"
-                pos="relative"
-                left={8}
-                placeholder="blur"
-              />
-              <Heading size="lg">{project.name}</Heading>
-            </HStack>
+          <Image
+            src={project.icon}
+            alt={project.name}
+            width="64px"
+            height="64px"
+            zIndex={3}
+            rounded="md"
+            placeholder="blur"
+          />
+
+          <Stack
+            direction={{ base: "column", md: "row" }}
+            justify="space-between"
+            w="100%"
+          >
+            <Heading size="lg">{project.name}</Heading>
 
             <Heading size="lg" color="gray.400">
               {project.year}
             </Heading>
-          </HStack>
-        </Container>
+          </Stack>
+        </HStack>
       </Link>
     </WrapItem>
   );

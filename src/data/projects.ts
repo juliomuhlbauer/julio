@@ -1,51 +1,52 @@
 import { StaticImageData } from "next/image";
+
+import TwinsterBanner from "public/projects/twinster/banner.png";
+import TwinsterIcon from "public/projects/twinster/icon.png";
+
+import RDFBanner from "public/projects/rdf/banner.png";
+import RDFIcon from "public/projects/rdf/icon.png";
+
+import InboxBanner from "public/projects/inbox/banner.png";
+import InboxIcon from "public/projects/inbox/icon.png";
+
+import AnimationsBanner from "public/projects/animations/banner.png";
+import AnimationsIcon from "public/projects/animations/icon.jpg";
+
 export interface ProjectsProps {
   name: string;
   link: string;
   banner: StaticImageData;
-  logo: StaticImageData;
+  icon: StaticImageData;
   year: string;
 }
-
-import TwinsterBanner from "public/projects/twinster/banner.png";
-import TwinsterLogo from "public/projects/twinster/logo.png";
-
-import RDFBanner from "public/projects/RDF-LP.png";
-import RDFLogo from "public/projects/RDF-logo.png";
-
-import AnimationsBanner from "public/projects/animations-banner.png";
-import AnimationsLogo from "public/projects/animations-logo.jpg";
-
-import InboxIcon from "public/projects/inbox-icon.png";
-import InboxBanner from "public/projects/inbox-banner.png";
 
 export const projects: ProjectsProps[] = [
   {
     name: "Twinster",
     link: "https://twinster.app",
     banner: TwinsterBanner,
-    logo: TwinsterLogo,
+    icon: TwinsterIcon,
     year: "2022-now",
   },
   {
     name: "A Rede do Futuro",
     link: "https://arededofuturo.com.br/",
     banner: RDFBanner,
-    logo: RDFLogo,
+    icon: RDFIcon,
     year: "2020-now",
   },
   {
     name: "Inbox App",
     link: "https://myinbox.vercel.app/",
     banner: InboxBanner,
-    logo: InboxIcon,
+    icon: InboxIcon,
     year: "2020-now",
   },
   {
     name: "Animations",
     link: "https://www.youtube.com/channel/UCQUbPhQlz0cQG7Km1xovJDg",
     banner: AnimationsBanner,
-    logo: AnimationsLogo,
-    year: "2014-2015",
+    icon: AnimationsIcon,
+    year: "2014-2016",
   },
 ];
