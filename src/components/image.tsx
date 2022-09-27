@@ -1,5 +1,5 @@
 import { chakra } from "@chakra-ui/system";
-import NextImage from "next/image";
+import NextImage from "next/future/image";
 
 export const Image = chakra(NextImage, {
   shouldForwardProp: (prop) =>

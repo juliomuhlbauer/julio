@@ -1,13 +1,8 @@
-import { meta } from "@/data";
 import { Layout } from "@/layout";
 import { theme } from "@/theme";
 import { ChakraProvider } from "@chakra-ui/react";
-import "@fontsource/inter/400.css";
-import "@fontsource/inter/500.css";
-import "@fontsource/inter/600.css";
-import "@fontsource/inter/700.css";
-import "@fontsource/inter/800.css";
-import "@fontsource/inter/900.css";
+
+import { config } from "config";
 import { DefaultSeo } from "next-seo";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -49,27 +44,28 @@ const SEO = () => {
   const router = useRouter();
   return (
     <DefaultSeo
-      defaultTitle={meta.title}
-      titleTemplate={`%s | Júlio Werner`}
-      description={meta.description}
+      defaultTitle={config.name}
+      titleTemplate={`%s | ${config.name}`}
+      description={config.description}
       openGraph={{
-        site_name: meta.title,
-        title: meta.title,
-        description: meta.description,
-        url: meta.url + router.asPath,
+        site_name: config.name,
+        title: config.name,
+        description: config.description,
+        url: config.url + router.asPath,
         locale: "en_US",
         type: "website",
         images: [
           {
-            url: meta.banner,
+            url: config.banner,
             width: 1200,
             height: 630,
-            alt: meta.description,
+            alt: config.description,
           },
         ],
       }}
       twitter={{
         cardType: "summary_large_image",
+        handle: config.handle,
       }}
     />
   );
@@ -79,7 +75,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="/Logo.svg" />
+        <link rel="shortcut icon" href="/logo.svg" />
       </Head>
       <SEO />
       {process.env.NODE_ENV !== "development" && <Analytics />}

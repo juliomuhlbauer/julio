@@ -10,8 +10,8 @@ const config: ThemeConfig = {
 };
 
 const fonts = {
-  heading: `Inter, ${base.fonts.heading}`,
-  body: `Inter, ${base.fonts.body}`,
+  heading: `IBM Plex Sans, ${base.fonts.heading}`,
+  body: `IBM Plex Sans, ${base.fonts.body}`,
 };
 
 export const theme = extendTheme({
@@ -20,7 +20,15 @@ export const theme = extendTheme({
   colors,
   semanticTokens: {
     colors: {
-      accent: "primary.200",
+      accent: "#E96B10",
+      bg: {
+        _light: "gray.100",
+        _dark: "#1F1312",
+      },
+      default: {
+        _light: "gray.700",
+        _dark: "gray.200",
+      },
     },
   },
   components,

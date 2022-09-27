@@ -38,7 +38,7 @@ export const Layout: FC<{
           as="main"
           h="100%"
           py={4}
-          maxW="container.md"
+          maxW="container.lg"
           mb={{ base: 0, mb: 64 }}
         >
           <Motion
