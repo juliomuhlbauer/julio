@@ -1,6 +1,4 @@
 import { Box, chakra, SystemStyleObject } from "@chakra-ui/react";
-import NextImage from "next/future/image";
-import NoiseImg from "public/noise.png";
 
 const animation: SystemStyleObject = {
   animationName: "Gradient",
@@ -25,6 +23,8 @@ export const Background = () => {
         filter: "contrast(200%)",
         opacity: 0.75,
       }}
+      w="100%"
+      h="100%"
     >
       <Box w="100%" h="100%">
         <chakra.svg
@@ -37,7 +37,7 @@ export const Background = () => {
           }}
         >
           <chakra.g>
-            <chakra.rect width="100%" height="100%" fill="bg" />
+            <rect width="100%" height="100%" fill="#1F1312" />
             <chakra.path
               sx={{
                 ...animation,
