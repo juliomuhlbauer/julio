@@ -29,6 +29,7 @@ export const Layout: FC<{
 
       <Stack align="center" minH="100vh">
         <Header />
+
         <Container as="main" h="100%" maxW="container.lg" py={4} pb={24}>
           <Motion
             key={router.route}
@@ -43,14 +44,16 @@ export const Layout: FC<{
             {children}
           </Motion>
         </Container>
+
+        <BottomNav
+          display={{ base: "block", md: "none" }}
+          sx={{
+            "@media print": {
+              display: "none",
+            },
+          }}
+        />
       </Stack>
-      <BottomNav
-        sx={{
-          "@media print": {
-            display: "none",
-          },
-        }}
-      />
     </>
   );
 };
