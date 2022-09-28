@@ -1,20 +1,41 @@
-import { Container } from "@chakra-ui/react";
-import { NextSeo } from "next-seo";
-import { Prose } from "@nikolovlazar/chakra-ui-prose";
+import { Container, HStack, Link, Stack, StackDivider } from "@chakra-ui/react";
 import Markdoc, { RenderableTreeNode } from "@markdoc/markdoc";
-import React from "react";
+import { Prose } from "@nikolovlazar/chakra-ui-prose";
 import * as fs from "fs";
+import { NextSeo } from "next-seo";
+import React from "react";
 
 const About = ({ content }: { content: RenderableTreeNode }) => {
   return (
     <>
       <NextSeo title="About" />
 
-      {/* 
-      TODO: export as PDF
-      */}
       <Container>
-        <Prose>{Markdoc.renderers.react(content, React)}</Prose>
+        <Stack spacing={8}>
+          <HStack spacing={4} divider={<StackDivider />}>
+            <Link
+              sx={{
+                "@media print": {
+                  display: "none",
+                },
+              }}
+              onClick={() => {
+                window.print();
+              }}
+            >
+              Donwload PDF
+            </Link>
+
+            <Link
+              href="https://www.notion.so/juliomuhlbauer/e02c1e93431346e0b5c34ca6f11acb83"
+              isExternal
+            >
+              Resume in Notion
+            </Link>
+          </HStack>
+
+          <Prose id="resume">{Markdoc.renderers.react(content, React)}</Prose>
+        </Stack>
       </Container>
     </>
   );

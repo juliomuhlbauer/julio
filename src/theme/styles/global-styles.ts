@@ -17,7 +17,6 @@ export const globalStyles: Styles = {
       bg: "bg",
       color: "default",
     },
-
     _selection: {
       color: "white",
       background: "primary.500",
