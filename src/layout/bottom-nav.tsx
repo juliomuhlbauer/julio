@@ -1,11 +1,11 @@
 import { pages } from "@/data";
 import { IconButton } from "@chakra-ui/button";
 import Icon from "@chakra-ui/icon";
-import { Box, HStack } from "@chakra-ui/layout";
+import { Box, HStack, BoxProps } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 
-export const BottomNav = () => {
+export const BottomNav = (props: BoxProps) => {
   const router = useRouter();
 
   return (
@@ -14,6 +14,7 @@ export const BottomNav = () => {
       position="fixed"
       bottom={4}
       display={{ base: "block", md: "none" }}
+      {...props}
     >
       <HStack
         as="nav"
