@@ -30,13 +30,7 @@ export const Layout: FC<{
       <Stack align="center" minH="100vh">
         <Header />
         <BottomNav />
-        <Container
-          as="main"
-          h="100%"
-          py={4}
-          maxW="container.lg"
-          mb={{ base: 0, mb: 64 }}
-        >
+        <Container as="main" h="100%" maxW="container.lg" py={4} pb={24}>
           <Motion
             key={router.route}
             h="100%"
