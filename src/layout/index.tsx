@@ -46,6 +46,7 @@ export const Layout: FC<{
         </Container>
 
         <BottomNav
+          display={{ base: "block", md: "none" }}
           sx={{
             "@media print": {
               display: "none",

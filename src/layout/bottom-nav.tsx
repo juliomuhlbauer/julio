@@ -9,13 +9,7 @@ export const BottomNav = (props: BoxProps) => {
   const router = useRouter();
 
   return (
-    <Box
-      zIndex="10"
-      position="fixed"
-      bottom={4}
-      display={{ base: "block", md: "none" }}
-      {...props}
-    >
+    <Box zIndex="10" position="fixed" bottom={4} {...props}>
       <HStack
         as="nav"
         justify="center"
