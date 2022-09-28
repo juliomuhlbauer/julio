@@ -1,20 +1,14 @@
+import { Image } from "@/components/image";
 import { pages, socials } from "@/data";
 import { Button, IconButton } from "@chakra-ui/button";
 import Icon from "@chakra-ui/icon";
 import { Container, HStack, Link } from "@chakra-ui/layout";
-import VisuallyHidden from "@chakra-ui/visually-hidden";
 import NextLink from "next/link";
 import { useRouter } from "next/router";
-import useSound from "use-sound";
 import ProfileImg from "public/julio.jpg";
-import { Image } from "@/components/image";
 
 export const Header = () => {
   const router = useRouter();
-
-  const [playPing] = useSound("/sounds/ping.mp3", {
-    volume: 0.25,
-  });
 
   return (
     <Container
@@ -36,11 +30,7 @@ export const Header = () => {
         }}
       >
         <NextLink href="/" passHref>
-          <Link
-            onClick={() => {
-              playPing();
-            }}
-          >
+          <Link>
             <Image
               src={ProfileImg}
               placeholder="blur"
@@ -65,9 +55,6 @@ export const Header = () => {
                 variant="ghost"
                 fontWeight="bold"
                 fontSize="xl"
-                onClick={() => {
-                  playPing();
-                }}
                 color="default"
                 _hover={{
                   color: "accent",
@@ -96,9 +83,6 @@ export const Header = () => {
               icon={<Icon as={social.icon} boxSize={6} />}
               href={social.link}
               isExternal
-              onClick={() => {
-                playPing();
-              }}
               _hover={{
                 color: "accent",
               }}
