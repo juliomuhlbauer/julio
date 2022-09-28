@@ -25,7 +25,7 @@ export const Layout: FC<{
     <>
       {/* <ContextMenu /> */}
 
-      <Background />
+      {/* <Background /> */}
 
       <Stack align="center" minH="100vh">
         <Header />
