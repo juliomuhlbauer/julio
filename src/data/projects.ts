@@ -12,6 +12,9 @@ import InboxIcon from "public/projects/inbox/icon.png";
 import AnimationsBanner from "public/projects/animations/banner.png";
 import AnimationsIcon from "public/projects/animations/icon.jpg";
 
+import JWFilmesBanner from "public/projects/jw-filmes/banner.png";
+import JWFilmesIcon from "public/projects/jw-filmes/icon.png";
+
 export interface ProjectsProps {
   name: string;
   link: string;
@@ -43,10 +46,17 @@ export const projects: ProjectsProps[] = [
     year: "2020-now",
   },
   {
-    name: "Animations",
-    link: "https://www.youtube.com/channel/UCQUbPhQlz0cQG7Km1xovJDg",
+    name: "JW Filmes",
+    link: "https://sites.google.com/view/jw-filmes",
     banner: AnimationsBanner,
     icon: AnimationsIcon,
+    year: "2016-2020",
+  },
+  {
+    name: "Animations",
+    link: "https://www.youtube.com/channel/UCQUbPhQlz0cQG7Km1xovJDg",
+    banner: JWFilmesBanner,
+    icon: JWFilmesIcon,
     year: "2014-2016",
   },
 ];

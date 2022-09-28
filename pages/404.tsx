@@ -14,25 +14,17 @@ const NotFoundPage: NextPage = () => {
             fontSize={{ base: "6xl", md: "8xl" }}
             fontWeight="black"
             textAlign="center"
-            bgGradient="linear(to-r, #F23A1F, #FFE345)"
-            bgClip="text"
+            color="accent"
           >
             404
           </Heading>
           <NextLink href="/" passHref>
             <Button
               as={Link}
+              colorScheme="primary"
               size="lg"
-              color="gray.800"
               fontSize="xl"
               fontWeight="black"
-              bgGradient="linear(to-r, #F23A1F, #FFE345)"
-              _hover={{
-                bg: "linear(to-r, #F23A1F, #FFE345)",
-              }}
-              _active={{
-                bg: "linear(to-r, #F23A1F, #FFE345)",
-              }}
             >
               Home
             </Button>
