@@ -1,5 +1,6 @@
 import { Layout } from "@/layout";
 import { theme } from "@/theme";
+import { playPing } from "@/utils/sound";
 import { ChakraProvider } from "@chakra-ui/react";
 
 import { config } from "config";
@@ -10,7 +11,10 @@ import { Router, useRouter } from "next/router";
 import Script from "next/script";
 import NProgress from "nprogress";
 
-Router.events.on("routeChangeStart", () => NProgress.start());
+Router.events.on("routeChangeStart", () => {
+  NProgress.start();
+  playPing();
+});
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
 
