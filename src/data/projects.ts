@@ -48,15 +48,15 @@ export const projects: ProjectsProps[] = [
   {
     name: "JW Filmes",
     link: "https://sites.google.com/view/jw-filmes",
-    banner: AnimationsBanner,
-    icon: AnimationsIcon,
+    banner: JWFilmesBanner,
+    icon: JWFilmesIcon,
     year: "2016-2020",
   },
   {
     name: "Animations",
     link: "https://www.youtube.com/channel/UCQUbPhQlz0cQG7Km1xovJDg",
-    banner: JWFilmesBanner,
-    icon: JWFilmesIcon,
+    banner: AnimationsBanner,
+    icon: AnimationsIcon,
     year: "2014-2016",
   },
 ];
