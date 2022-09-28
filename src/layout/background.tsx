@@ -43,8 +43,7 @@ export const Background = () => {
         xmlns="http://www.w3.org/2000/svg"
       >
         <chakra.g
-          sx={{
-            ...animation,
+          style={{
             opacity: 0.5,
           }}
           filter="url(#filter0_f_3_67)"
@@ -68,7 +67,7 @@ export const Background = () => {
             filterUnits="userSpaceOnUse"
             colorInterpolationFilters="sRGB"
           >
-            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feFlood floodOpacity="0" result="BackgroundImageFix" />
             <feBlend
               mode="normal"
               in="SourceGraphic"

@@ -1,4 +1,4 @@
-import { Container, Heading } from "@chakra-ui/react";
+import { Container } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import { Prose } from "@nikolovlazar/chakra-ui-prose";
 import Markdoc, { RenderableTreeNode } from "@markdoc/markdoc";
@@ -9,6 +9,10 @@ const About = ({ content }: { content: RenderableTreeNode }) => {
   return (
     <>
       <NextSeo title="About" />
+
+      {/* 
+      TODO: export as PDF
+      */}
       <Container>
         <Prose>{Markdoc.renderers.react(content, React)}</Prose>
       </Container>
