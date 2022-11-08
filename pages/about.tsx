@@ -27,7 +27,7 @@ const About = ({ content }: { content: RenderableTreeNode }) => {
             </Link>
 
             <Link
-              href="https://www.notion.so/juliomuhlbauer/e02c1e93431346e0b5c34ca6f11acb83"
+              href="https://juliomuhlbauer.notion.site/e02c1e93431346e0b5c34ca6f11acb83"
               isExternal
             >
               Resume in Notion
