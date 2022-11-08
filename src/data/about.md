@@ -43,10 +43,16 @@
   - Figma
   - Almost all Adobe softwares
 
+### My goals
+
+- I want to build a small farm with my girlfriend by 2030
+- I want to run a marathon by 2025
+- I want to visit all capitals from Brazil by 2070
+
 ### My life
 
-- I am chasing my dream to build a small farm with my girlfriend
 - In my free time I like to run, do calisthenics, cook and read
 - For taking a break from work, I like to travel around Brazil, specially on places that have nature and new experiences such as with Worldpackers
 - I am interested in neuroscience, technologies and nutrition
 - My favorite books are Essentialism, Almanack of Naval Ravikant and The Power of the Now
+- I played basketball for the São Caetano do Sul team for 2 years
