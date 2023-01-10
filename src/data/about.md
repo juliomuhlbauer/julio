@@ -5,6 +5,11 @@
 
 ### Experience
 
+- Creditares (2022-today)
+  - Site: [https://creditares.com.br/](https://creditares.com.br/)
+  - AgFinTech - making rural credit easier
+  - Role: Front-end developer
+  - App: [https://app.agroopenbank.com.br/](https://app.agroopenbank.com.br/)
 - Twinster (2022)
   - App: [https://twinster.app](https://twinster.app/)
   - SaaS of automated conversion of tweets and threads to post on other social medias
